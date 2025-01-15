@@ -6,7 +6,7 @@
 
   <modelVersion>4.0.0</modelVersion>
 
-  <!-- Importa todas as configurações de versão do Spring Boot -->
+
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
@@ -19,7 +19,7 @@
   <artifactId>api-review</artifactId>
   <version>1.0-SNAPSHOT</version>
 
-  <!-- Definições de propriedade (se quiser usar Java 17) -->
+ 
   <properties>
     <java.version>17</java.version>
   </properties>
@@ -30,6 +30,13 @@
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
     </dependency>
+
+  <dependency>
+    <groupId>org.postgresql</groupId>
+    <artifactId>postgresql</artifactId>
+    <scope>runtime</scope>
+  </dependency>
+
 
     <!-- Spring Data JPA -->
     <dependency>
@@ -50,7 +57,6 @@
       <version>0.9.1</version>
     </dependency>
 
-    <!-- Lombok (facilita getters/setters) -->
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
@@ -71,10 +77,7 @@
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
-        <!-- 
-          Versão pode ser omitida pois já vem do parent (3.0.5).
-          Caso queira explícita, certifique-se de que bate com a do parent.
-        -->
+   
         <executions>
           <execution>
             <goals>
